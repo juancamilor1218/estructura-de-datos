@@ -14,7 +14,18 @@ public class Test {
     public static void main (String [] Args){
        TestingStacks();
        TestingQueues();
-        
+       List l=new List();
+       for(int i=0;i<5;i++){
+           l.add(i+2, i);
+       }
+       l.add(10, 1);
+       
+        System.out.println("+++++++vector original+++++++++++++");
+       l.print();
+       //l.Remove(2);
+       //  System.out.println("+++++++vector removido+++++++++++++");
+       //l.print();
+       
     }
     public static void TestingStacks(){
         System.out.println("..............STACKS TESTING...........");
@@ -25,6 +36,7 @@ public class Test {
         s.print();
         s.remove();
         s.print();
+        
         for(int i=2; i<20; i+=2){
             s.add(i);
         }
