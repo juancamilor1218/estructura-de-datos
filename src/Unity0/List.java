@@ -25,11 +25,12 @@ public class List {
     }
      public void add(int d, int index){
         top++;//hago el espacio
-        for(int i=top-2;i>=index;i--){
-            data[i]=data[i+1];
+        if(index<top){
+            for(int i=top-1;i>=index;i--){
+            data[i+1]=data[i];
+            }
+            data[index]=d;
         }
-        data[index]=d;
-        
     }
     public int Remove(int num){
        int da;
