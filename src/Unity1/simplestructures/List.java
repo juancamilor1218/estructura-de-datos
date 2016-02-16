@@ -48,4 +48,25 @@ public class List {
            }
        return counter;  
     }
+    public void PrintFirtsElement(){
+       if(head!=null){ 
+        System.out.print(head.data);
+       } else {
+           System.out.println("-1");
+       }
+       
+       
+    }
+    public void PrintLastElement(){
+        Node aux=head;
+        if(aux.next!=null){
+             while(aux.next!=null){
+               aux=aux.next;
+             }
+             System.out.println(aux.data);
+        } else {
+            System.out.println("-1");
+        }
+         
+    }
 }

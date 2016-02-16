@@ -18,5 +18,9 @@ public class Test {
         System.out.print("INITIAL VALUESS");
         l.print();
         System.out.println(l.Count());
+        System.out.println("THE FIRTS ELEMENT IS: ");
+        l.PrintFirtsElement();
+        System.out.println("THE last ELEMENT IS: ");
+        l.PrintLastElement();
     }   
 }
