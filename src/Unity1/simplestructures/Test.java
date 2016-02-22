@@ -15,12 +15,19 @@ public class Test {
         l.add(5);
         l.add(3);
         l.add(10);
+        l.add(20);
+        
         System.out.print("INITIAL VALUESS");
         l.print();
-        System.out.println(l.Count());
+        System.out.println(l.Remove(2));
+        l.RemoveFirtsElement();
+        l.print();
+        /*System.out.println(l.Count());
         System.out.println("THE FIRTS ELEMENT IS: ");
         l.PrintFirtsElement();
         System.out.println("THE last ELEMENT IS: ");
         l.PrintLastElement();
+                */
+                                                                                                                                                                                                     
     }   
 }
