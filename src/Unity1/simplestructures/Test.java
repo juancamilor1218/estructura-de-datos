@@ -20,7 +20,7 @@ public class Test {
         System.out.print("INITIAL VALUESS");
         l.print();
         System.out.println(l.Remove(2));
-        l.RemoveFirtsElement();
+     //   l.RemoveFirtsElement();
         l.print();
         /*System.out.println(l.Count());
         System.out.println("THE FIRTS ELEMENT IS: ");
