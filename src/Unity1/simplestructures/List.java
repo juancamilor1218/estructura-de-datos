@@ -37,13 +37,13 @@ public class List {
            System.out.println("");
     }
     public int Remove(int i){
-        int data;
+        int data=-1;
         if(head==null) {
             
         }
         if(i==0){
             head=head.next;   
-        }
+        } else {
         Node aux =head , p=null;
         int counter=0;
         for(;counter<i && aux!=null;counter++){
@@ -55,7 +55,9 @@ public class List {
         if(aux!=null){
             p.next=aux.next;
         }
+        }
         return data;
+        
     }
     public int Count(){
         Node aux=head;
