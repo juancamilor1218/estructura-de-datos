@@ -19,6 +19,9 @@ public class Test1 {
         l.print();
         l.removeFirts();
         l.print();
+        l.removeLast();
+        l.print();
+        
     
    
 }

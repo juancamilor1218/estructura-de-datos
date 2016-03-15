@@ -35,7 +35,8 @@ public class List1 {
            System.out.println("");
     }
     public void removeFirts(){
-        Node head=null;
+        head=head.next;
+        head.back=null;
     }
     public void removeLast(){
        
@@ -47,6 +48,9 @@ public class List1 {
         aux.next=null;
         
         
+    }
+    public void invert(){
+      
     }
     
 }
