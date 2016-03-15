@@ -105,7 +105,7 @@ public class List {
         int c=Count();
         for(int i=0;i<c;i++){
             if(i%2==1){
-                p.next=aux.next;
+                p.next=aux.next; 
             }
             p=aux;
             aux=aux.next;
