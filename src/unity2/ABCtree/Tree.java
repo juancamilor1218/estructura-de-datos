@@ -86,4 +86,26 @@ public class Tree {
        return false;
        
    }
+   public int max(){
+       int max=-1;
+       Node aux=root;
+       if(root!=null){
+           while(aux.right!=null){
+               aux=aux.right;
+           }
+           max=aux.data;
+    }
+       return max;
+   }
+   public int min(){
+       int min=-1;
+       Node aux=root;
+       if(root!=null){
+           while(aux.left!=null){
+               aux=aux.left;
+           }
+           min=aux.data;
+    }
+       return min;
+   }
 }
