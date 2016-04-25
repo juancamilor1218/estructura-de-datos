@@ -16,19 +16,21 @@ public class List {
         head=null;
     }
     public void add(int d){
-       Node aux=head , p=head;
+      
         Node n=new Node(d);
         if(head==null){
-          head=n;
+        head=n;   
        } else {
+        Node aux=head, p=head;
         
-            while(aux!=head){
+       
+        do{    
             p=aux;
             aux=aux.next;
-            }
-            n.next=head;
+         }while(aux!=head);
+            n.next=aux;
             p.next=n;
-            }
+        }
     }
     public void print(){
         Node aux=head;

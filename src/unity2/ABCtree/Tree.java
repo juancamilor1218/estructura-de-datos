@@ -5,6 +5,7 @@
  */
 package unity2.ABCtree;
 
+import java.util.Stack;
 import java.util.Vector;
 
 /**
@@ -107,5 +108,44 @@ public class Tree {
            min=aux.data;
     }
        return min;
+   }
+     public void print(){
+       Node aux=root;
+       Stack <Node> s = new Stack <Node>();
+       while(aux!=null){
+           s.push(aux);
+           aux=aux.left;
+       }
+       while(!s.empty()){
+           aux=s.pop();
+           System.out.println(""+aux.data);
+           aux=aux.right;
+           
+           while(aux!=null){
+               s.push(aux);
+               aux=aux.left;
+           }
+       }
+   }
+     public int Count(){
+       
+       int cont=0;
+       Node aux=root;
+       Stack <Node> s = new Stack <Node>();
+       while(aux!=null){
+           s.push(aux);
+           aux=aux.left;
+       }
+        while(!s.empty()){
+           aux=s.pop();
+           cont++;
+           aux=aux.right;
+           
+           while(aux!=null){
+               s.push(aux);
+               aux=aux.left;
+           }
+       }
+        return cont;
    }
 }

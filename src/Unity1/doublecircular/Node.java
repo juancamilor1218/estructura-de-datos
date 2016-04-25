@@ -10,12 +10,14 @@ package Unity1.doublecircular;
  * @author Acer
  */
 public class Node {
-    public int data;
-    public Node next;
+    protected int data;
+     protected Node next ;
+     protected Node back ;
     
     public Node(int d){
         data=d; 
         next=this;
-    }
+        back=this;
+    } 
    
 }

@@ -22,13 +22,16 @@ public class List {
           head=n;
        } else {
         
-            while(aux!=head){
+        do{    
             p=aux;
             aux=aux.next;
-            }
+         }while(aux!=head);
             n.next=head;
-            p.next=n;
-            }
+            head.back=n;
+            n.back=p;
+            p.back=n;
+            
+        }
     }
     public void print(){
         Node aux=head;
