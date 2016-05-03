@@ -148,4 +148,74 @@ public class Tree {
        }
         return cont;
    }
+   public void  PreorderPrint(){
+       PreorderPrint(root);
+       System.out.println();
+   }
+   private void  PreorderPrint(Node r){
+           if(r==null) return;
+        
+        System.out.println(""+ r.data);
+           PreorderPrint(r.left);
+            PreorderPrint(r.right);
+       
+   }
+    public void  PostorderPrint(){
+       PostorderPrint(root);
+       System.out.print("");
+   }
+   private void  PostorderPrint(Node r){
+           if(r==null) return;
+        
+        System.out.println(""+ r.data);
+           PostorderPrint(r.left);
+            PostorderPrint(r.right);
+       
+   }
+    
+   
+   public void recursivePrint(){
+        
+        recursivePrint(root);
+        System.out.println();
+        
+    }
+    
+    private void recursivePrint(Node r){
+        
+        if(r==null) return;
+        
+        recursivePrint(r.left);
+        System.out.println(""+ r.data);
+        recursivePrint(r.right);
+    }
+    
+    public int recursiveCount(){
+        return recursiveCount(root);
+    }
+    
+    private int recursiveCount(Node r){
+    
+        if(r==null) return 0;
+        
+        return recursiveCount(r.left) +
+                
+        recursiveCount(r.right) +1;
+    }
+    public void PrintLeafs(){
+         PrintLeafs(root);
+        
+    }
+    private void PrintLeafs(Node r){
+           if(r==null) return;
+        
+        
+           PrintLeafs(r.left);
+          // System.out.println(r.left.data);
+           System.out.println(""+r.data);
+            PrintLeafs(r.right);
+            
+            //System.out.println(r.right.data);
+    }
+
 }

@@ -20,8 +20,14 @@ public class Test {
         l.add(6);
         l.add(4);
         l.add(2);
-        l.max();
-        System.out.println(l.max());
-        System.out.println(l.min());
+       // l.max();
+       // System.out.println(l.max());
+        //System.out.println(l.min());
+//        System.out.println("postorder");
+//        l.PostorderPrint();
+//        System.out.println("preorder");
+//        l.PreorderPrint();
+        System.out.println("    ========================   ");
+        l.PrintLeafs();
     }
 }
