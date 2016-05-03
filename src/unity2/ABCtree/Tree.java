@@ -203,19 +203,24 @@ public class Tree {
         recursiveCount(r.right) +1;
     }
     public void PrintLeafs(){
-         PrintLeafs(root);
-        
+        PrintLeafs(root);
+        System.out.println();
     }
+    
     private void PrintLeafs(Node r){
-           if(r==null) return;
         
+        if(r==null) return;
         
-           PrintLeafs(r.left);
-          // System.out.println(r.left.data);
-           System.out.println(""+r.data);
-            PrintLeafs(r.right);
-            
-            //System.out.println(r.right.data);
+        PrintLeafs(r.left);
+        if(r.left==null){
+         System.out.println(""+r.data);   
+        }
+         PrintLeafs(r.right);
+         if(r.right==null){
+            System.out.println(""+r.data);
+        }
+                           
+        
     }
 
 }
