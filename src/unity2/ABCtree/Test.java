@@ -12,7 +12,7 @@ package unity2.ABCtree;
 public class Test {
     public static void main(String Args[]){
         Tree l= new Tree();
-        int [] datos={10,4,8,19,18,21,3,5,6,7,11,1,2};
+        int [] datos={12,4,8,19,18,21,3,5,6,7,11,1,2};
         for(int i=0;i<datos.length;i++){
             l.add(datos[i]);
         }
