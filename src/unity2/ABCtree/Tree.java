@@ -225,6 +225,20 @@ public class Tree {
                            
         
     }
+    public int Height() {
+        return Height(root);
+    }
+
+    private int Height(Node r) {
+
+        if (r == null) {
+            return 0;
+        }
+        int a = Height(r.left);
+        int b = Height(r.right);
+        return Math.max(a, b) + 1;
+
+    }
      public void Draw(){
       
        JFrame f = new JFrame(){
@@ -269,5 +283,68 @@ public class Tree {
        }
        return rootInfo;
    }
+    public int equilibriumFactor() {
+        return equilibriumFactor(root);
+    }
+
+    private int equilibriumFactor(Node r) {
+        return Height(r.left) - Height(r.right);
+    }
+
+    private void LeftRotation(Node r, Node handle) {
+        if (r == root) {
+            root = r.right;
+            r.right = root.left;
+            root.left = r;
+        } else if (r == handle.right) {
+            handle.right = r.right;
+            r.right = handle.right.left;
+            handle.right.left = r;
+        } else {
+            handle.left = r.right;
+            r.right = handle.left.left;
+            handle.left.left = r;
+        }
+    }
+
+    private void RightRotation(Node r, Node handle) {
+        if (r == root) {
+            root = r.left;
+            r.left = root.right;
+            root.right = r;
+        } else if (r == handle.left) {
+            handle.left = r.left;
+            r.left = handle.left.right;
+            handle.left.right = r;
+        } else {
+            handle.right = r.left;
+            r.left = handle.right.right;
+            handle.right.right = r;
+        }
+    }
+
+    public void balance() {
+        balance(root, null);
+    }
+
+    private void balance(Node r, Node handle) {
+        if (r == null) {
+            return;
+        }
+        balance(r.left, r);
+        balance(r.right, r);
+        int ef = equilibriumFactor(r);
+        if (ef < -1) {
+            if (equilibriumFactor(r.right) > 0) {
+                RightRotation(r.right, r);
+            }
+            LeftRotation(r, handle);
+        } else if (ef > 1) {
+            if (equilibriumFactor(r.left) < 0) {
+                LeftRotation(r.left, r);
+            }
+            RightRotation(r, handle);
+        }
+    } 
 
 }
